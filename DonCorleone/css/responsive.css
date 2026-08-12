@@ -1,0 +1,165 @@
+/* ============================================
+   DON CORLEONE - RESPONSIVE
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 991.98px) {
+    .header-don .logo {
+        font-size: 1.3rem;
+    }
+    .card-casino {
+        padding: 20px;
+    }
+    .sala-card {
+        padding: 16px;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 767.98px) {
+    .header-don {
+        padding: 10px 0;
+    }
+    .header-don .logo {
+        font-size: 1.1rem;
+    }
+    .header-don .saldo-box {
+        padding: 4px 14px;
+    }
+    .header-don .saldo-box .monto {
+        font-size: 1rem;
+    }
+    .btn-primary-casino {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+    .btn-outline-casino {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+    }
+    .card-casino {
+        padding: 14px;
+        border-radius: 12px;
+    }
+    .sala-card {
+        padding: 14px;
+        border-radius: 12px;
+    }
+    .avatar-casino {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    .ganancia-indicador .porcentaje {
+        font-size: 1rem;
+    }
+    .ruleta-wrapper {
+        max-width: 300px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 575.98px) {
+    .header-don .logo {
+        font-size: 0.9rem;
+    }
+    .header-don .saldo-box {
+        padding: 3px 10px;
+    }
+    .header-don .saldo-box .label {
+        font-size: 0.5rem;
+    }
+    .header-don .saldo-box .monto {
+        font-size: 0.85rem;
+    }
+    .btn-primary-casino {
+        padding: 6px 14px;
+        font-size: 0.7rem;
+        border-radius: 8px;
+    }
+    .btn-outline-casino {
+        padding: 5px 10px;
+        font-size: 0.65rem;
+        border-radius: 8px;
+    }
+    .card-casino {
+        padding: 12px;
+        border-radius: 10px;
+    }
+    .sala-card {
+        padding: 12px;
+        border-radius: 10px;
+    }
+    .sala-card .monto-badge {
+        font-size: 0.7rem;
+        padding: 2px 10px;
+    }
+    .avatar-casino {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+    .ganancia-indicador {
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+    .ganancia-indicador .porcentaje {
+        font-size: 0.9rem;
+    }
+    .ganancia-indicador .nivel {
+        font-size: 0.6rem;
+    }
+    .ruleta-wrapper {
+        max-width: 220px;
+    }
+    .ruleta-flecha {
+        font-size: 1.4rem;
+        top: -12px;
+    }
+    .modal-dialog {
+        margin: 8px;
+    }
+}
+
+/* Landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header-don {
+        padding: 6px 0;
+    }
+    .header-don .logo {
+        font-size: 0.9rem;
+    }
+    .header-don .saldo-box {
+        padding: 2px 10px;
+    }
+    .header-don .saldo-box .monto {
+        font-size: 0.8rem;
+    }
+    .card-casino {
+        padding: 10px;
+    }
+    .sala-card {
+        padding: 10px;
+    }
+    .avatar-casino {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+    .ruleta-wrapper {
+        max-width: 160px;
+    }
+}
+
+/* Touch optimizations */
+@media (hover: none) {
+    .sala-card:hover {
+        transform: none !important;
+    }
+    .btn-primary-casino:hover {
+        transform: none !important;
+    }
+    .card-casino:hover {
+        transform: none !important;
+    }
+}

@@ -1,0 +1,510 @@
+/* ============================================
+   DON CORLEONE - STYLE STAKE
+   ============================================ */
+
+:root {
+    --bg-primary: #0f0f1a;
+    --bg-secondary: #181825;
+    --bg-card: #1a1a2e;
+    --bg-card-hover: #22223a;
+    --text-primary: #ffffff;
+    --text-secondary: #8a8a9a;
+    --text-muted: #5a5a6a;
+    --green: #00ff88;
+    --green-dark: #00cc6a;
+    --green-glow: rgba(0, 255, 136, 0.15);
+    --red: #ff3355;
+    --red-glow: rgba(255, 51, 85, 0.15);
+    --gold: #ffd700;
+    --gold-glow: rgba(255, 215, 0, 0.15);
+    --blue: #4a8aff;
+    --blue-glow: rgba(74, 138, 255, 0.15);
+    --purple: #7c3aed;
+    --orange: #ff6b35;
+    --border-color: rgba(255, 255, 255, 0.06);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { 
+    background: var(--green);
+    border-radius: 10px;
+}
+
+/* ===== HEADER ===== */
+.header-don {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.header-don .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-don .logo span {
+    color: var(--green);
+}
+
+.header-don .saldo-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 6px 18px;
+    transition: all 0.3s;
+}
+
+.header-don .saldo-box:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 30px var(--green-glow);
+}
+
+.header-don .saldo-box .label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-don .saldo-box .monto {
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary-casino {
+    background: var(--green);
+    color: var(--bg-primary);
+    border: none;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 30px var(--green-glow);
+    cursor: pointer;
+}
+
+.btn-primary-casino:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 50px var(--green-glow);
+    color: var(--bg-primary);
+}
+
+.btn-primary-casino:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-outline-casino {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 10px 28px;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-outline-casino:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.btn-outline-casino.active {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.btn-danger-casino {
+    background: var(--red);
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 30px var(--red-glow);
+    cursor: pointer;
+}
+
+.btn-danger-casino:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 50px var(--red-glow);
+    color: white;
+}
+
+.btn-gold-casino {
+    background: var(--gold);
+    color: var(--bg-primary);
+    border: none;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 30px var(--gold-glow);
+    cursor: pointer;
+}
+
+.btn-gold-casino:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 50px var(--gold-glow);
+    color: var(--bg-primary);
+}
+
+/* ===== TARJETAS ===== */
+.card-casino {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.card-casino:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.card-casino-green {
+    border-color: rgba(0, 255, 136, 0.15);
+}
+
+.card-casino-green:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 40px var(--green-glow);
+}
+
+/* ===== SALAS ===== */
+.sala-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sala-card:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sala-card .monto-badge {
+    background: rgba(0, 255, 136, 0.1);
+    color: var(--green);
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.sala-card .estado-badge {
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sala-card .estado-badge.abierta {
+    background: rgba(0, 255, 136, 0.1);
+    color: var(--green);
+}
+.sala-card .estado-badge.llena {
+    background: rgba(255, 51, 85, 0.1);
+    color: var(--red);
+}
+.sala-card .estado-badge.jugando {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--gold);
+    animation: pulse-badge 1.5s infinite;
+}
+.sala-card .estado-badge.finalizada {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+}
+
+/* ===== INDICADOR DE GANANCIA ===== */
+.ganancia-indicador {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    border-left: 4px solid var(--green);
+}
+
+.ganancia-indicador .porcentaje {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.ganancia-indicador .nivel {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.ganancia-bar {
+    height: 6px;
+    border-radius: 10px;
+    background: var(--border-color);
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.ganancia-bar .fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.8s ease;
+    background: var(--green);
+}
+
+/* ===== AVATAR ===== */
+.avatar-casino {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.avatar-casino:hover {
+    transform: scale(1.05);
+    border-color: var(--green);
+}
+
+.avatar-casino .online {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 2px solid var(--bg-card);
+    animation: pulse-dot 2s infinite;
+}
+
+.avatar-casino .crown {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 1rem;
+    animation: bounce-in 0.6s;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes bounce-in {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { transform: scale(1.3); }
+    70% { transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.avatar-iluminado {
+    animation: iluminar 0.6s ease-in-out 3;
+}
+
+@keyframes iluminar {
+    0%, 100% { 
+        box-shadow: 0 0 20px var(--green-glow);
+        border-color: var(--green);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 60px var(--green-glow), 0 0 120px rgba(0, 255, 136, 0.2);
+        border-color: var(--green);
+        transform: scale(1.15);
+    }
+}
+
+.avatar-ganador-final {
+    animation: ganador-final 1.5s ease-in-out infinite;
+    border-color: var(--green) !important;
+    box-shadow: 0 0 60px var(--green-glow), 0 0 120px rgba(0, 255, 136, 0.2) !important;
+    transform: scale(1.25);
+}
+
+@keyframes ganador-final {
+    0%, 100% { 
+        box-shadow: 0 0 60px var(--green-glow), 0 0 120px rgba(0, 255, 136, 0.2);
+        transform: scale(1.25);
+    }
+    50% { 
+        box-shadow: 0 0 100px var(--green-glow), 0 0 200px rgba(0, 255, 136, 0.3);
+        transform: scale(1.35);
+    }
+}
+
+/* ===== CONFETI ===== */
+.confeti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: caer-confeti 3s linear forwards;
+}
+
+@keyframes caer-confeti {
+    0% { 
+        opacity: 1;
+        transform: translateY(-100px) rotate(0deg) scale(1);
+    }
+    100% { 
+        opacity: 0;
+        transform: translateY(100vh) rotate(720deg) scale(0.5);
+    }
+}
+
+/* ===== RULETA ===== */
+.ruleta-wrapper {
+    position: relative;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.ruleta-canvas {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 4px solid var(--border-color);
+    box-shadow: 0 0 60px rgba(0, 255, 136, 0.05);
+    transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+    background: var(--bg-primary);
+}
+
+.ruleta-flecha {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: var(--green);
+    z-index: 10;
+    text-shadow: 0 0 30px var(--green-glow);
+    animation: flecha-saltar 1.5s ease-in-out infinite;
+}
+
+@keyframes flecha-saltar {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* ===== MODAL ===== */
+.modal-casino .modal-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.modal-casino .modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-casino .modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+/* ===== TOAST ===== */
+.toast-casino {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 20px;
+}
+
+/* ===== UTILITIES ===== */
+.text-green { color: var(--green) !important; }
+.text-red { color: var(--red) !important; }
+.text-gold { color: var(--gold) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-muted { color: var(--text-muted) !important; }
+
+.bg-card { background: var(--bg-card) !important; }
+.bg-secondary-custom { background: var(--bg-secondary) !important; }
+
+.border-green { border-color: var(--green) !important; }
+.border-red { border-color: var(--red) !important; }
+
+.glow-green { box-shadow: 0 0 40px var(--green-glow); }
+.glow-red { box-shadow: 0 0 40px var(--red-glow); }
+.glow-gold { box-shadow: 0 0 40px var(--gold-glow); }
+
+.divider-casino {
+    height: 1px;
+    background: var(--border-color);
+    margin: 20px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header-don .logo { font-size: 1.2rem; }
+    .header-don .saldo-box .monto { font-size: 1rem; }
+    .btn-primary-casino, .btn-outline-casino { padding: 8px 20px; font-size: 0.8rem; }
+    .card-casino { padding: 16px; }
+    .sala-card { padding: 16px; }
+    .avatar-casino { width: 40px; height: 40px; font-size: 1.1rem; }
+    .ganancia-indicador .porcentaje { font-size: 1.1rem; }
+}
+
+@media (max-width: 576px) {
+    .header-don .logo { font-size: 1rem; }
+    .header-don .saldo-box { padding: 4px 12px; }
+    .header-don .saldo-box .monto { font-size: 0.9rem; }
+    .container { padding-left: 12px; padding-right: 12px; }
+    .ganancia-indicador { padding: 8px 12px; }
+}
